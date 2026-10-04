@@ -1,0 +1,451 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #dca5f4, #f3c7ed);
+  color: #32145f;
+}
+
+/* COMMON SCREEN */
+
+.screen {
+  display: none;
+  min-height: 100vh;
+  padding: 25px 15px;
+}
+
+.screen.active {
+  display: block;
+}
+
+/* SCREEN 1 */
+
+.top-title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.top-title h1 {
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.top-title p {
+  margin-top: 6px;
+  font-size: 17px;
+}
+
+/* TWO CARDS SIDE BY SIDE */
+
+.plans {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.plan-card {
+  background: white;
+  border-radius: 22px;
+  width: 50%;
+  max-width: 500px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(70, 20, 100, 0.2);
+  text-align: center;
+  padding-bottom: 22px;
+}
+
+.plan-icon {
+  width: 70px;
+  height: 70px;
+  margin: 22px auto 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #673ab7;
+  color: white;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.plan-card h2 {
+  font-size: 25px;
+  margin: 10px 5px 18px;
+}
+
+.price {
+  background: linear-gradient(90deg, #6518d7, #bd19df);
+  color: white;
+
+  font-size: 48px;
+  font-weight: 900;
+
+  padding: 20px 5px;
+  transform: skewX(-3deg);
+}
+
+.features {
+  text-align: left;
+  padding: 22px 25px 10px;
+}
+
+.features p {
+  font-size: 17px;
+  margin-bottom: 17px;
+}
+
+.buy-btn {
+  border: none;
+  background: linear-gradient(90deg, #7020d5, #a81fe0);
+  color: white;
+
+  padding: 15px 28px;
+  border-radius: 35px;
+
+  font-size: 19px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.buy-btn:hover {
+  transform: scale(1.04);
+}
+
+.buy-btn span {
+  font-size: 27px;
+  vertical-align: -2px;
+}
+
+
+/* SCREEN 2 */
+
+.telegram-screen {
+  background:
+    radial-gradient(circle at 50% 20%, #174e9b, #062c69 55%, #031f4d);
+  color: white;
+  text-align: center;
+  padding-top: 45px;
+}
+
+.telegram-logo {
+  width: 145px;
+  height: 145px;
+
+  margin: auto;
+
+  border-radius: 50%;
+  background: linear-gradient(135deg, #16bff5, #1685e9);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 0 30px rgba(20, 190, 255, 0.6);
+}
+
+.telegram-logo span {
+  font-size: 78px;
+  transform: rotate(-12deg);
+}
+
+.telegram-screen h1 {
+  font-size: 46px;
+  margin-top: 25px;
+}
+
+.telegram-screen h2 {
+  color: #19c7ff;
+  font-size: 62px;
+  margin-top: -5px;
+}
+
+.telegram-screen h3 {
+  font-size: 34px;
+  margin-top: 5px;
+}
+
+.subtitle {
+  font-size: 19px;
+  margin: 25px 0 18px;
+  color: #d7eaff;
+}
+
+.selected-plan {
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.12);
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+/* TELEGRAM LINKS */
+
+.telegram-link {
+  width: min(90%, 750px);
+  min-height: 82px;
+
+  margin: 16px auto;
+
+  background: #f7fbff;
+  color: #55718e;
+
+  border: 5px solid #1bc5fa;
+  border-radius: 50px;
+
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: bold;
+
+  overflow: hidden;
+}
+
+.tg-left,
+.tg-right {
+  width: 68px;
+  height: 68px;
+  flex-shrink: 0;
+
+  margin: 2px;
+
+  border-radius: 50%;
+  background: #159ee8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 34px;
+}
+
+.telegram-link span {
+  flex: 1;
+  text-align: center;
+}
+
+.tg-right {
+  margin-left: auto;
+}
+
+/* JOIN TEXT */
+
+.join-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 18px;
+  margin: 35px 10px 20px;
+
+  font-size: 22px;
+}
+
+.join-text span {
+  color: #16c5ff;
+  font-size: 48px;
+}
+
+/* NEXT */
+
+.next-btn,
+.home-btn {
+  border: 3px solid #25cfff;
+  border-radius: 35px;
+
+  background: linear-gradient(#35d5ff, #1689db);
+  color: white;
+
+  padding: 12px 55px;
+
+  font-size: 22px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow: 0 0 15px rgba(20, 200, 255, 0.5);
+}
+
+.next-btn span {
+  font-size: 28px;
+}
+
+.back-btn {
+  display: block;
+  margin: 18px auto;
+
+  background: transparent;
+  color: white;
+
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+/* SCREEN 3 */
+
+.final-screen {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background: linear-gradient(135deg, #082d68, #079fe0);
+  color: white;
+}
+
+.final-screen.active {
+  display: flex;
+}
+
+.final-box {
+  width: min(90%, 500px);
+  background: rgba(255,255,255,0.12);
+  padding: 45px 25px;
+  border-radius: 25px;
+}
+
+.check {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #20c4ee;
+
+  font-size: 55px;
+}
+
+.final-box h1 {
+  margin: 25px 0 15px;
+  font-size: 38px;
+}
+
+.final-box p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .screen {
+    padding: 15px 8px;
+  }
+
+  .plans {
+    gap: 8px;
+  }
+
+  .plan-card {
+    border-radius: 15px;
+  }
+
+  .plan-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 25px;
+    margin-top: 14px;
+  }
+
+  .plan-card h2 {
+    font-size: 14px;
+    min-height: 34px;
+  }
+
+  .price {
+    font-size: 29px;
+    padding: 13px 2px;
+  }
+
+  .features {
+    padding: 15px 10px 5px;
+  }
+
+  .features p {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .buy-btn {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+
+  .telegram-logo {
+    width: 105px;
+    height: 105px;
+  }
+
+  .telegram-logo span {
+    font-size: 55px;
+  }
+
+  .telegram-screen h1 {
+    font-size: 34px;
+  }
+
+  .telegram-screen h2 {
+    font-size: 47px;
+  }
+
+  .telegram-screen h3 {
+    font-size: 23px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+
+  .telegram-link {
+    min-height: 64px;
+    border-width: 3px;
+    font-size: 13px;
+  }
+
+  .tg-left,
+  .tg-right {
+    width: 52px;
+    height: 52px;
+    font-size: 25px;
+  }
+
+  .join-text {
+    font-size: 16px;
+  }
+
+  .join-text span {
+    font-size: 35px;
+  }
+
+  .next-btn {
+    font-size: 18px;
+    padding: 11px 40px;
+  }
+}
