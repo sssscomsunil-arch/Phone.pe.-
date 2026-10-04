@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Plans - Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- SCREEN 1 -->
+  <section id="screen1" class="screen active">
+    <div class="top-title">
+      <h1>Digital Plans</h1>
+      <p>Choose your plan</p>
+    </div>
+
+    <div class="plans">
+
+      <!-- ₹99 PLAN -->
+      <div class="plan-card">
+        <div class="plan-icon">₹</div>
+        <h2>NORMAL BUY</h2>
+
+        <div class="price">₹99</div>
+
+        <div class="features">
+          <p>✓ Double Bank</p>
+          <p>✓ SMS Features</p>
+          <p>✓ Permanent History</p>
+          <p>✕ Sound Box</p>
+        </div>
+
+        <button class="buy-btn" onclick="openTelegramScreen('Normal Buy', 99)">
+          BUY NOW <span>›</span>
+        </button>
+      </div>
+
+      <!-- ₹199 PLAN -->
+      <div class="plan-card">
+        <div class="plan-icon">₹</div>
+        <h2>SOUND BOX BUY</h2>
+
+        <div class="price">₹199</div>
+
+        <div class="features">
+          <p>✓ Double Bank</p>
+          <p>✓ SMS Features</p>
+          <p>✓ Permanent History</p>
+          <p>✓ Sound Box</p>
+        </div>
+
+        <button class="buy-btn" onclick="openTelegramScreen('Sound Box Buy', 199)">
+          BUY NOW <span>›</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SCREEN 2 -->
+  <section id="screen2" class="screen telegram-screen">
+
+    <div class="telegram-logo">
+      <span>➤</span>
+    </div>
+
+    <h1>Join Our</h1>
+    <h2>Telegram</h2>
+    <h3>Channel & Group</h3>
+
+    <p class="subtitle">
+      Get Latest Updates, Offers & More
+    </p>
+
+    <div class="selected-plan" id="selectedPlan">
+      Selected Plan
+    </div>
+
+    <!-- MAIN CHANNEL -->
+    <a
+      class="telegram-link"
+      href="https://t.me/PHONEPESELLER99"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div class="tg-left">➤</div>
+      <span>Main Telegram Channel</span>
+      <div class="tg-right">›</div>
+    </a>
+
+    <!-- OWNER -->
+    <a
+      class="telegram-link"
+      href="https://t.me/thesunnnny"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div class="tg-left">➤</div>
+      <span>Owner Telegram</span>
+      <div class="tg-right">›</div>
+    </a>
+
+    <div class="join-text">
+      <span>➤</span>
+      <strong>Click on any link<br>
+      and Join Now!</strong>
+    </div>
+
+    <button class="next-btn" onclick="goNext()">
+      NEXT <span>›</span>
+    </button>
+
+    <button class="back-btn" onclick="goBack()">
+      ← Back
+    </button>
+
+  </section>
+
+
+  <!-- SCREEN 3 -->
+  <section id="screen3" class="screen final-screen">
+
+    <div class="final-box">
+      <div class="check">✓</div>
+
+      <h1>Thank You!</h1>
+
+      <p>
+        You can continue using the Telegram links
+        above for the demo.
+      </p>
+
+      <button class="home-btn" onclick="goHome()">
+        BACK TO PLANS
+      </button>
+    </div>
+
+  </section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
